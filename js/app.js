@@ -5,25 +5,25 @@ function game(player1, player2) {
     } else if (player1 == 'scissors' && player2 == 'spock') {
         winner = 'You have lost!!!';
     } else if (player1 == 'scissors' && player2 == 'lizard') {
-        winner = 'You have win!!!';
+        winner = 'You have won!!!';
     } else if (player1 == 'rock' && player2 == 'scissors') {
-        winner = 'You have win!!!';
+        winner = 'You have won!!!';
     } else if (player1 == 'rock' && player2 == 'spock') {
         winner = 'You have lost!!!';
     } else if (player1 == 'rock' && player2 == 'lizard') {
-        winner = 'You have win!!!';
+        winner = 'You have won!!!';
     } else if (player1 == 'scissors' && player2 == 'paper') {
-        winner = 'You have win!!!'; 
+        winner = 'You have won!!!'; 
     } else if (player1 == 'paper' && player2 == 'scissors') {
         winner = 'You have lost!!!';
     } else if (player1 == 'paper' && player2 == 'lizard') {
         winner = 'You have lost!!!';
     } else if (player1 == 'paper' && player2 == 'spock') {
-        winner = 'You have win!!!';
+        winner = 'You have won!!!';
     } else if (player1 == 'rock' && player2 == 'paper') {
         winner = 'You have lost!!!';
     }  else if (player1 == 'paper' && player2 == 'rock') {
-        winner = 'You have win!!!';
+        winner = 'You have won!!!';
     }  else if (player1 == 'scissors' && player2 == 'scissors') {
         winner = 'Draw -,-';
     }  else if (player1 == 'paper' && player2 == 'paper') {
@@ -35,19 +35,19 @@ function game(player1, player2) {
     } else if (player1 == 'spock' && player2 == 'lizard'){
         winner = 'You have lost!!!';
     } else if (player1 == 'spock' && player2 == 'rock'){
-        winner = 'You have win!!!';
+        winner = 'You have won!!!';
     } else if (player1 == 'spock' && player2 == 'paper'){
         winner = 'You have lost!!!';
     } else if (player1 == 'spock' && player2 == 'scissors'){
-        winner = 'You have win!!!';
+        winner = 'You have won!!!';
     } else if (player1 == 'lizard' && player2 == 'lizard'){
         winner = 'Draw -,-';
     } else if (player1 == 'lizard' && player2 == 'spock'){
-        winner = 'You have win!!!';
+        winner = 'You have won!!!';
     } else if (player1 == 'lizard' && player2 == 'rock'){
         winner = 'You have lost!!!';
     } else if (player1 == 'lizard' && player2 == 'paper'){
-        winner = 'You have win!!!';
+        winner = 'You have won!!!';
     } else if (player1 == 'lizard' && player2 == 'scissors'){
         winner = 'You have lost!!!';
     }
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 divLightbox.remove();
             }, 2000);
             setTimeout(() => {
-                if (res == "You have win!!!") {
+                if (res == "You have won!!!") {
                     counter1 += 1
                 } else if (res == "You have lost!!!") {
                     counter2 += 1
