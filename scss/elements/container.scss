@@ -1,0 +1,137 @@
+.container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $mainColor;
+}   
+.panel {
+    width: 80%;
+    height: 52vh;
+    display: flex;
+    justify-content: center;
+    background-color: darken($mainColor, 5);
+    border-radius: 3em;
+    box-shadow: 0px 0px 49px 3px rgba(0,0,0,0.75);
+}
+.cols {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    color: $titleColor;
+}
+.player,
+.oponent {
+    padding-top: 4em;
+        span {
+        font-size: 2.5em;
+    }
+    .resultsPlayer,
+    .oponentResult {
+        font-size: 10em;
+    }   
+}   
+.mainPrompt {
+    margin-top: 2em;
+    height: 18em;
+    width: 18em;    
+    background-image: url("../images/mainLightOne.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: $titleColor;
+}
+.versus {
+    span {
+        font-size: 3em;
+    }
+}
+.options {
+    width: 80vw;
+    height: 22vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn {
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    background-color: $titleColor; 
+    box-shadow: inset 0px 0px 49px 2px rgba(38, 39, 32, 0.83);
+    border: none;
+}
+.svg {
+    width: 7em;
+    height:7em;
+    fill: $mainColor;
+    stroke: $mainColor;
+}
+.btn:hover {
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 49px 10px rgba(0,0,0,0.83);
+    transition: 0.5s;
+}
+.btnRock {
+    .svg {
+        height: 6em;
+        width: 6em;
+    }
+}
+.rotate {
+    transform: rotate(360deg);
+    transition: 3s;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background: rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-cnt {
+    width: 30%;
+    height: 10%;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $titleColor;
+    font-size: 3em;
+    background: darken($mainColor, 20);
+    box-shadow: 0 0 40px rgba(0,0,0,0.7);
+    position: relative;
+}
+
+@media (max-width: 1000px) {
+    .panel {
+        width: 80%;
+        height: 52vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .oponent,
+        .player {
+            width: 45%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        span {
+            font-size: 4em;
+            padding-bottom: 1em;
+        }
+    }
+    }
+    .lightbox-cnt {
+        width: 50%;
+        font-size: 3em;
+    }
+}

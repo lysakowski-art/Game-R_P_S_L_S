@@ -1,0 +1,32 @@
+.footer {
+    width: 100vw;
+    height: 5vh;
+    background-color: darken($mainColor, 25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+        padding-left: 1em;
+        color: $titleColor;
+    }
+}
+.icons {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.github {
+    svg {
+    fill: $titleColor;
+    }
+}
+.linkedin {
+    svg {
+        fill: $titleColor;
+        }
+}
+.facebook {
+    svg {
+        fill: $titleColor;
+        }
+}
