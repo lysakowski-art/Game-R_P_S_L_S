@@ -5,5 +5,5 @@ In this case I used Sass combained with Gulp. It gave me an oportunity to work w
 I have chosen Sass because it has more readable form.
 Application is writen according to RWD, so it can be run as a mobile.
 
-It shows my level of experience I have become since I had started learning in January 2020.
+It shows my level of experience I have achived since I had started learning in January 2020.
 
