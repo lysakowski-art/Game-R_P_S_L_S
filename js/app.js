@@ -52,7 +52,6 @@ function game(player1, player2) {
         winner = 'You have lost!!!';
     }
     return winner;
-    // console.log(winner);
 }
 
 function bot() {
@@ -68,10 +67,10 @@ function botChoice(n) {
 // // DOM
 
 document.addEventListener('DOMContentLoaded', function() {
-// create start
+
+    // create start
 const divLightbox = document.createElement("div");
 divLightbox.classList.add("lightbox");
-
 const divLightboxCnt = document.createElement("div");
 divLightboxCnt.classList.add("lightbox-cnt");
 const btnClose = document.createElement("button");
@@ -80,6 +79,7 @@ btnClose.innerHTML = `
 `
 divLightbox.append(divLightboxCnt);
 // create end
+
 // catched start
 const container = document.querySelector(".container");
 const panel = document.querySelector(".panel")
@@ -89,17 +89,8 @@ const btns = document.querySelectorAll(".btn");
 const oponentResult = document.querySelector(".oponentResult");
 const playerResult = document.querySelector(".resultsPlayer");
 // catched end
-// rotation of logo 
-// ten kod jest do wyjebania jak poniższy z rotacją dla oponenta zadziałą
-// for (const el of btns) {
-//     el.addEventListener("click", function () {
-//         mainPrompt.classList.add("rotate");
-//         setTimeout(() => {
-//             mainPrompt.classList.remove("rotate");    
-//         }, 3000);
-//     })
-// }
-// game
+
+// game start
 let counter1 = 0;
 let counter2 = 0;
 for (const el of btns) {
@@ -107,9 +98,6 @@ for (const el of btns) {
         e.preventDefault();
         let oponent = botChoice(bot()); 
         let res = game(el.dataset.name, oponent);
-        console.log(oponent);
-        // tutaj trzeba zakodzić rotację spinera 
-        // poniszy kod powinien obrócić spiner o 72stopnie do "kamienia", a potem obrócić do pełnych 360 i zdjąć klasy
         if (oponent == "spock") {
              mainPrompt.classList.add("rotateSpockStartEnd");
              setTimeout(() => {
@@ -165,7 +153,6 @@ for (const el of btns) {
             playerResult.innerText = counter1;
             oponentResult.innerText = counter2;
         }, 2000)
-    //    potrzeba wyregulować czas pojawiania się wyniku, myślę, żę 2500 będzie ok
         })
     }
 });
